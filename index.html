@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Search Input States</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #121827;
+      background: #000000;
       font-family: sans-serif;
       color: #ffffff;
       padding: 40px;
@@ -20,11 +21,12 @@
     .input-wrapper {
       display: flex;
       align-items: center;
-      background-color: #1f273a;
-      border: 2px solid #2f3b59;
-      border-radius: 8px;
-      padding: 10px 14px;
-      width: 300px;
+      background-color: #3E4365;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 350px;
+      height: 40px;
       transition: all 0.3s ease;
       margin-bottom: 30px;
     }
@@ -32,10 +34,18 @@
     .input-wrapper input {
       background: transparent;
       border: none;
-      color: white;
+      color: #D4D9F8;
       outline: none;
       width: 100%;
       font-size: 15px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+
+    .input-wrapper input::placeholder {
+      color: #D4D9F8;
     }
 
     .input-wrapper .icon {
@@ -46,19 +56,20 @@
 
     /* Hover state */
     .input-wrapper:hover {
-      border-color: #3b82f6;
+      border: 2px solid #0A9FD6;
+      box-shadow: 0 0 5px rgba(10, 159, 214, 0.5);
     }
 
     /* Focus state */
     .input-wrapper:focus-within {
-      border-color: #60a5fa;
-      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.3);
+      border: 2px solid #0A9FD6;
+      box-shadow: 0 0 8px rgba(10, 159, 214, 0.7);
     }
 
     /* Disabled */
     .input-wrapper.disabled {
-      background-color: #1a1f2e;
-      border-color: #3a3f57;
+      background-color: #363C47;
+      border-color: transparent;
       opacity: 0.5;
       pointer-events: none;
     }
@@ -69,25 +80,21 @@
   <h2>1. Default</h2>
   <div class="input-wrapper">
     <input type="text" placeholder="Search..." />
-    <span class="icon">🔍</span>
   </div>
 
-  <h2>2. Hover (Di chuột vào để xem)</h2>
+  <h2>2. Hover</h2>
   <div class="input-wrapper">
     <input type="text" placeholder="Search..." />
-    <span class="icon">🔍</span>
   </div>
 
-  <h2>3. Focus (Click vào để gõ)</h2>
+  <h2>3. Focus</h2>
   <div class="input-wrapper">
     <input type="text" placeholder="Search..." />
-    <span class="icon">🔍</span>
   </div>
 
   <h2>4. Disabled</h2>
   <div class="input-wrapper disabled">
     <input type="text" placeholder="Search..." disabled />
-    <span class="icon">🔍</span>
   </div>
 
 </body>
